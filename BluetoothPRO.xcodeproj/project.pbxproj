@@ -11,8 +11,10 @@
 		67085E1429241BEF0028F1B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67085E1329241BEF0028F1B9 /* ContentView.swift */; };
 		67085E1629241BF00028F1B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67085E1529241BF00028F1B9 /* Assets.xcassets */; };
 		67085E1929241BF00028F1B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67085E1829241BF00028F1B9 /* Preview Assets.xcassets */; };
-		67085E1B29241BF00028F1B9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67085E1A29241BF00028F1B9 /* Persistence.swift */; };
-		67085E1E29241BF00028F1B9 /* BluetoothPRO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67085E1C29241BF00028F1B9 /* BluetoothPRO.xcdatamodeld */; };
+		67085E2529241C450028F1B9 /* SentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67085E2429241C450028F1B9 /* SentManager.swift */; };
+		67085E28292421210028F1B9 /* RecieveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67085E27292421210028F1B9 /* RecieveManager.swift */; };
+		67085E2D292429810028F1B9 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67085E2C292429810028F1B9 /* Utility.swift */; };
+		67085E2F2924C2C80028F1B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67085E2E2924C2C80028F1B9 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +23,10 @@
 		67085E1329241BEF0028F1B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		67085E1529241BF00028F1B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67085E1829241BF00028F1B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		67085E1A29241BF00028F1B9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		67085E1D29241BF00028F1B9 /* BluetoothPRO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BluetoothPRO.xcdatamodel; sourceTree = "<group>"; };
+		67085E2429241C450028F1B9 /* SentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentManager.swift; sourceTree = "<group>"; };
+		67085E27292421210028F1B9 /* RecieveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieveManager.swift; sourceTree = "<group>"; };
+		67085E2C292429810028F1B9 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		67085E2E2924C2C80028F1B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +59,13 @@
 		67085E1029241BEF0028F1B9 /* BluetoothPRO */ = {
 			isa = PBXGroup;
 			children = (
+				67085E2B292429780028F1B9 /* Helpers */,
+				67085E26292421050028F1B9 /* BluetoothManagers */,
 				67085E1129241BEF0028F1B9 /* BluetoothPROApp.swift */,
 				67085E1329241BEF0028F1B9 /* ContentView.swift */,
 				67085E1529241BF00028F1B9 /* Assets.xcassets */,
-				67085E1A29241BF00028F1B9 /* Persistence.swift */,
-				67085E1C29241BF00028F1B9 /* BluetoothPRO.xcdatamodeld */,
 				67085E1729241BF00028F1B9 /* Preview Content */,
+				67085E2E2924C2C80028F1B9 /* User.swift */,
 			);
 			path = BluetoothPRO;
 			sourceTree = "<group>";
@@ -71,6 +76,23 @@
 				67085E1829241BF00028F1B9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		67085E26292421050028F1B9 /* BluetoothManagers */ = {
+			isa = PBXGroup;
+			children = (
+				67085E2429241C450028F1B9 /* SentManager.swift */,
+				67085E27292421210028F1B9 /* RecieveManager.swift */,
+			);
+			path = BluetoothManagers;
+			sourceTree = "<group>";
+		};
+		67085E2B292429780028F1B9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				67085E2C292429810028F1B9 /* Utility.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67085E1E29241BF00028F1B9 /* BluetoothPRO.xcdatamodeld in Sources */,
-				67085E1B29241BF00028F1B9 /* Persistence.swift in Sources */,
+				67085E2D292429810028F1B9 /* Utility.swift in Sources */,
+				67085E28292421210028F1B9 /* RecieveManager.swift in Sources */,
+				67085E2F2924C2C80028F1B9 /* User.swift in Sources */,
 				67085E1429241BEF0028F1B9 /* ContentView.swift in Sources */,
 				67085E1229241BEF0028F1B9 /* BluetoothPROApp.swift in Sources */,
+				67085E2529241C450028F1B9 /* SentManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +227,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -257,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -278,6 +302,8 @@
 				DEVELOPMENT_TEAM = 5U55B3662Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Включи блютуз ээээ";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "ny pj";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -307,6 +333,8 @@
 				DEVELOPMENT_TEAM = 5U55B3662Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Включи блютуз ээээ";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "ny pj";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -347,19 +375,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		67085E1C29241BF00028F1B9 /* BluetoothPRO.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				67085E1D29241BF00028F1B9 /* BluetoothPRO.xcdatamodel */,
-			);
-			currentVersion = 67085E1D29241BF00028F1B9 /* BluetoothPRO.xcdatamodel */;
-			path = BluetoothPRO.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 67085E0629241BEF0028F1B9 /* Project object */;
 }
