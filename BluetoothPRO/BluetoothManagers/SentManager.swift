@@ -47,7 +47,6 @@ final class BroadCastManager: NSObject {
     override init() {
         super.init()
         self.peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
-        
     }
 }
 

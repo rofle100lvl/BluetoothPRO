@@ -79,4 +79,3 @@ extension RecieveManager: CBPeripheralDelegate {
             }
     }
 }
-
