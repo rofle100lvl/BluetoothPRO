@@ -10,7 +10,7 @@ import CoreBluetooth
 import Combine
 
 class RecieveManager: NSObject, ObservableObject {
-    @Published var user: User?
+    @Published var nearbyUsersIds: [String] = []
     var centralManager: CBCentralManager? = nil
     var pherials: [CBPeripheral] = []
     let vm = BluetoothSeviceViewModel.initReadable()
@@ -74,8 +74,8 @@ extension RecieveManager: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         guard let userData = characteristic.value else { return }
         let decoder = JSONDecoder()
-            if let decoded = try? decoder.decode(User.self, from: userData) {
-                self.user = decoded
+            if let decoded = try? decoder.decode(String.self, from: userData) {
+                self.nearbyUsersIds.append(decoded)
             }
     }
 }

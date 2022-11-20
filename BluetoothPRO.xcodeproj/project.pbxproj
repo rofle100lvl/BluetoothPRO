@@ -16,6 +16,15 @@
 		67085E2D292429810028F1B9 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67085E2C292429810028F1B9 /* Utility.swift */; };
 		67085E2F2924C2C80028F1B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67085E2E2924C2C80028F1B9 /* User.swift */; };
 		672086C72925453600C3DB57 /* CircleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672086C62925453600C3DB57 /* CircleAnimationView.swift */; };
+		67C7D9772928CF3000FA8705 /* FindUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D9762928CF3000FA8705 /* FindUsersView.swift */; };
+		67C7D97A2929373600FA8705 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D9792929373600FA8705 /* UserDefaultsManager.swift */; };
+		67C7D97C2929378A00FA8705 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D97B2929378A00FA8705 /* AppModel.swift */; };
+		67C7D98029293BCB00FA8705 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D97F29293BCB00FA8705 /* MainView.swift */; };
+		67C7D98429293D4C00FA8705 /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D98329293D4C00FA8705 /* FriendsListView.swift */; };
+		67C7D9862929814600FA8705 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D9852929814600FA8705 /* FriendListViewModel.swift */; };
+		67C7D98A2929839800FA8705 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D9892929839800FA8705 /* FriendCell.swift */; };
+		67C7D98C292ABF4900FA8705 /* FoundUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D98B292ABF4900FA8705 /* FoundUserView.swift */; };
+		67C7D98E292AC3B000FA8705 /* CircleUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D98D292AC3B000FA8705 /* CircleUserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +38,15 @@
 		67085E2C292429810028F1B9 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		67085E2E2924C2C80028F1B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		672086C62925453600C3DB57 /* CircleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnimationView.swift; sourceTree = "<group>"; };
+		67C7D9762928CF3000FA8705 /* FindUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindUsersView.swift; sourceTree = "<group>"; };
+		67C7D9792929373600FA8705 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		67C7D97B2929378A00FA8705 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		67C7D97F29293BCB00FA8705 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		67C7D98329293D4C00FA8705 /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
+		67C7D9852929814600FA8705 /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
+		67C7D9892929839800FA8705 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		67C7D98B292ABF4900FA8705 /* FoundUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundUserView.swift; sourceTree = "<group>"; };
+		67C7D98D292AC3B000FA8705 /* CircleUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleUserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +79,15 @@
 		67085E1029241BEF0028F1B9 /* BluetoothPRO */ = {
 			isa = PBXGroup;
 			children = (
+				67C7D9872929817B00FA8705 /* Models */,
+				67C7D97E29293B8C00FA8705 /* Views */,
+				67C7D97D2929386B00FA8705 /* ViewModels */,
+				67C7D9782929372300FA8705 /* Core */,
 				67085E2B292429780028F1B9 /* Helpers */,
-				67085E26292421050028F1B9 /* BluetoothManagers */,
 				67085E1129241BEF0028F1B9 /* BluetoothPROApp.swift */,
 				67085E1329241BEF0028F1B9 /* ContentView.swift */,
 				67085E1529241BF00028F1B9 /* Assets.xcassets */,
 				67085E1729241BF00028F1B9 /* Preview Content */,
-				67085E2E2924C2C80028F1B9 /* User.swift */,
-				672086C62925453600C3DB57 /* CircleAnimationView.swift */,
 			);
 			path = BluetoothPRO;
 			sourceTree = "<group>";
@@ -96,6 +115,54 @@
 				67085E2C292429810028F1B9 /* Utility.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		67C7D9782929372300FA8705 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				67C7D9792929373600FA8705 /* UserDefaultsManager.swift */,
+				67085E26292421050028F1B9 /* BluetoothManagers */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		67C7D97D2929386B00FA8705 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				67C7D97B2929378A00FA8705 /* AppModel.swift */,
+				67C7D9852929814600FA8705 /* FriendListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		67C7D97E29293B8C00FA8705 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67C7D9882929838A00FA8705 /* Components */,
+				672086C62925453600C3DB57 /* CircleAnimationView.swift */,
+				67C7D9762928CF3000FA8705 /* FindUsersView.swift */,
+				67C7D97F29293BCB00FA8705 /* MainView.swift */,
+				67C7D98329293D4C00FA8705 /* FriendsListView.swift */,
+				67C7D98B292ABF4900FA8705 /* FoundUserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		67C7D9872929817B00FA8705 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				67085E2E2924C2C80028F1B9 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67C7D9882929838A00FA8705 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				67C7D9892929839800FA8705 /* FriendCell.swift */,
+				67C7D98D292AC3B000FA8705 /* CircleUserView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +236,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				67085E2D292429810028F1B9 /* Utility.swift in Sources */,
+				67C7D9862929814600FA8705 /* FriendListViewModel.swift in Sources */,
 				67085E28292421210028F1B9 /* RecieveManager.swift in Sources */,
+				67C7D98429293D4C00FA8705 /* FriendsListView.swift in Sources */,
 				67085E2F2924C2C80028F1B9 /* User.swift in Sources */,
+				67C7D97C2929378A00FA8705 /* AppModel.swift in Sources */,
 				67085E1429241BEF0028F1B9 /* ContentView.swift in Sources */,
+				67C7D98A2929839800FA8705 /* FriendCell.swift in Sources */,
+				67C7D98C292ABF4900FA8705 /* FoundUserView.swift in Sources */,
+				67C7D9772928CF3000FA8705 /* FindUsersView.swift in Sources */,
+				67C7D97A2929373600FA8705 /* UserDefaultsManager.swift in Sources */,
+				67C7D98E292AC3B000FA8705 /* CircleUserView.swift in Sources */,
+				67C7D98029293BCB00FA8705 /* MainView.swift in Sources */,
 				67085E1229241BEF0028F1B9 /* BluetoothPROApp.swift in Sources */,
 				672086C72925453600C3DB57 /* CircleAnimationView.swift in Sources */,
 				67085E2529241C450028F1B9 /* SentManager.swift in Sources */,

@@ -30,7 +30,7 @@ struct BluetoothSeviceViewModel {
     }
     
     static func fakeUserData() -> Data {
-        let userData = User(userToken: "fff-553", name: "Roman Gorbenko")
+        let userData = User(userToken: UUID(), name: "Roman Gorbenko", photo_url: Data())
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(userData) {
             return encoded

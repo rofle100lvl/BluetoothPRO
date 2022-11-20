@@ -19,13 +19,13 @@ struct DiscoverCircleView: View {
     @ObservedObject var circle: CircleData
     var animationTime: CGFloat
     var color: Color
-    var scale: CGFloat
+    @State var maxSize: CGSize
     
     var body: some View {
         Circle()
-            .stroke(self.color, lineWidth: circle.isAnimating ? 1.0/scale : 1)
-            .frame(width: circle.width, height: circle.width, alignment: .center)
-            .scaleEffect(circle.isAnimating ? scale : 1)
+            .stroke(self.color, lineWidth: 1)
+            .frame(width: circle.isAnimating ? maxSize.width : circle.width, height: circle.isAnimating ? maxSize.width : circle.width, alignment: .center)
+//            .scaleEffect(circle.isAnimating ? scale : 1)
             .opacity(circle.isAnimating ? 0 : 1)
             .animation(.easeInOut(duration: animationTime), value: circle.isAnimating)
             .onAppear {
@@ -48,7 +48,7 @@ struct PJRPulseButton: View {
     var timeBeetweenCircles: CGFloat
     let timer: Timer.TimerPublisher
 
-    init(color: Color = Color.blue, startWidth: CGFloat = 40, timeBeetweenCircles: CGFloat = 2, animationTime: CGFloat = 10) {
+    init(color: Color = Color.blue, startWidth: CGFloat = 5, timeBeetweenCircles: CGFloat = 2, animationTime: CGFloat = 10) {
         self.scale = 1
         self.color = color
         self.startWidth = startWidth
@@ -66,7 +66,7 @@ struct PJRPulseButton: View {
         ZStack {
             Group {
                 ForEach(circleArray) { cirlce in
-                    DiscoverCircleView(circle: cirlce, animationTime: self.animationTime, color: self.color, scale: self.storedSize.height / cirlce.width)
+                    DiscoverCircleView(circle: cirlce, animationTime: self.animationTime, color: self.color, maxSize: storedSize)
                 }
             }
         }
