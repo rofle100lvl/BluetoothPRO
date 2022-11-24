@@ -10,14 +10,30 @@ import CoreBluetooth
 import Combine
 
 class RecieveManager: NSObject, ObservableObject {
-    @Published var nearbyUsersIds: [String] = []
+    @Published var nearbyUsersIds: [String: CBPeripheral] = [:]
     var centralManager: CBCentralManager? = nil
     var pherials: [CBPeripheral] = []
-    let vm = BluetoothSeviceViewModel.initReadable()
+    var viewModel: BluetoothSeviceViewModel = .initSendUserId(data: Data())
 
     override init() {
         super.init()
         centralManager = CBCentralManager(delegate: self, queue: nil)
+    }
+    
+    func startSearch() {
+        self.centralManager?.scanForPeripherals(withServices: [Const.serviceUUID])
+    }
+    
+    func stopSearch() {
+        self.centralManager?.stopScan()
+    }
+    
+    func sendRequest(for userId: String, data: Data) {
+        guard let peripheral =  nearbyUsersIds[userId] else { return }
+        guard let services = peripheral.services else { return }
+        guard let service = services.first(where: { $0.uuid == Const.serviceUUID }),
+              let characteristic = service.characteristics?.first(where: { $0.uuid == Const.sendRequestCharacteristicUUID }) else { return }
+        peripheral.writeValue(data, for: characteristic, type: .withResponse)
     }
 }
 
@@ -47,7 +63,6 @@ extension RecieveManager: CBCentralManagerDelegate {
             print("central.state is .poweredOff")
         case .poweredOn:
             print("central.state is .poweredOn")
-            self.centralManager!.scanForPeripherals(withServices: [Const.serviceUUID])
         @unknown default:
             fatalError("ooooohhhh nooooo somethinggg bad happeeens")
         }
@@ -73,9 +88,9 @@ extension RecieveManager: CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         guard let userData = characteristic.value else { return }
-        let decoder = JSONDecoder()
-            if let decoded = try? decoder.decode(String.self, from: userData) {
-                self.nearbyUsersIds.append(decoded)
-            }
+        if let decoded = String(data: userData, encoding: .utf8) {
+            self.nearbyUsersIds[decoded] = peripheral
+        }
     }
+    
 }

@@ -7,39 +7,42 @@
 
 import SwiftUI
 import CoreData
+import PhotosUI
 
-struct SomeOtherView: View {
-    let manager = BroadCastManager()
-    var body: some View {
-        Text("SendView")
-    }
-}
-
-
-struct ContentView: View {
+struct RegistrationView: View {
     @State var userName: String = ""
-    let appModel: AppModel
+    @State var selectedImageData: Data?
+    @State var photo: PhotosPickerItem?
+    @ObservedObject var vm: RegistrationViewModel
     
     init(appModel: AppModel) {
-        self.appModel = appModel
+        vm = RegistrationViewModel(appModel: appModel)
     }
     
     var body: some View {
-        if appModel.currentUser != nil {
-            MainView(appModel: appModel)
+        if vm.currentUser != nil {
+            MainView(appModel: vm.appModel)
         } else {
             VStack {
                 Text("Choose your photo:")
+                PhotosPicker("some", selection: $photo)
                 Text("Enter your name")
                 TextField("Enter your username", text: $userName)
                 Button(action: {
-                    let user = User(userToken: UUID(), name: userName, photo_url: Data())
-                    appModel.networkManager.sendUser(user: user) {
-                        self.appModel.currentUser = user
+                    guard let selectedImageData = self.selectedImageData else { return }
+                    let user: User = User(id: UUID(), name: userName, photo_data: selectedImageData, friends: [])
+                    vm.appModel.networkManager.sendUser(user: user) {
+                        vm.currentUser = user
                     }
                 }) {
                     Text("Continue")
-                    
+                }
+            }
+            .onChange(of: photo) { newValue in
+                Task {
+                    if let imageData = try? await newValue?.loadTransferable(type: Data.self), let uiimage = UIImage(data: imageData) {
+                        self.selectedImageData = uiimage.jpegData(compressionQuality: 0.5)
+                    }
                 }
             }
         }
@@ -48,7 +51,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(appModel: AppModel())
+        RegistrationView(appModel: AppModel())
             .preferredColorScheme(.light)
     }
 }

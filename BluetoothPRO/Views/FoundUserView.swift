@@ -16,12 +16,23 @@ final class FoundUserViewModel: ObservableObject {
     
     init(appModel: AppModel) {
         self.appModel = appModel
-        appModel.recieveManager.$nearbyUsersIds.sink { usersId in
-            appModel.networkManager.fetchUser(user: UUID()) {
-                self.users.append($0)
+        appModel.recieveManager.$nearbyUsersIds.sink { usersIds in
+            for userId in usersIds.keys {
+                guard let userId = UUID(uuidString: userId) else { continue }
+                if self.users.map({ $0.id }).contains(userId) { continue }
+                
+                appModel.networkManager.fetchUser(id: userId) { user in
+                    self.users.append(User(dto: user))
+                }
             }
+            
         }
         .store(in: &store)
+    }
+    
+    func sendRequest(for index: Int) {
+        guard let data = appModel.currentUser?.id.uuidString.data(using: .utf8) else { return }
+        appModel.recieveManager.sendRequest(for: users[index].id.uuidString, data: data)
     }
 }
 
@@ -36,11 +47,13 @@ struct FoundUserView: View {
         if vm.users.count == 0 {
             Text("Discovering...")
         } else {
-            HStack {
-                ForEach(vm.users) { user in
-                    VStack {
-                        CircleDataView(data: user.photo_url)
-                        Text(user.name)
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(vm.users.indices) { index in
+                        FriendCell(user: vm.users[index])
+                            .onTapGesture {
+                                vm.sendRequest(for: index)
+                            }
                     }
                 }
             }

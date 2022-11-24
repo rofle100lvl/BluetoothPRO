@@ -16,6 +16,11 @@
 		67085E2D292429810028F1B9 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67085E2C292429810028F1B9 /* Utility.swift */; };
 		67085E2F2924C2C80028F1B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67085E2E2924C2C80028F1B9 /* User.swift */; };
 		672086C72925453600C3DB57 /* CircleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672086C62925453600C3DB57 /* CircleAnimationView.swift */; };
+		672ADC13292D6EA70094443D /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ADC12292D6EA70094443D /* RegistrationViewModel.swift */; };
+		672ADC16292E28E50094443D /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 672ADC15292E28E50094443D /* PopupView */; };
+		672ADC18292E76170094443D /* AddToFriendsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ADC17292E76170094443D /* AddToFriendsQuery.swift */; };
+		672ADC1A292E76370094443D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672ADC19292E76370094443D /* NetworkManager.swift */; };
+		67803F31292D01AA003350E5 /* RandomImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67803F30292D01AA003350E5 /* RandomImagesView.swift */; };
 		67C7D9772928CF3000FA8705 /* FindUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D9762928CF3000FA8705 /* FindUsersView.swift */; };
 		67C7D97A2929373600FA8705 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D9792929373600FA8705 /* UserDefaultsManager.swift */; };
 		67C7D97C2929378A00FA8705 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D97B2929378A00FA8705 /* AppModel.swift */; };
@@ -25,6 +30,8 @@
 		67C7D98A2929839800FA8705 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D9892929839800FA8705 /* FriendCell.swift */; };
 		67C7D98C292ABF4900FA8705 /* FoundUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D98B292ABF4900FA8705 /* FoundUserView.swift */; };
 		67C7D98E292AC3B000FA8705 /* CircleUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D98D292AC3B000FA8705 /* CircleUserView.swift */; };
+		67C7D994292BCD9800FA8705 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 67C7D993292BCD9800FA8705 /* Alamofire */; };
+		67C7D997292BE2A600FA8705 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7D996292BE2A600FA8705 /* UserDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,10 @@
 		67085E2C292429810028F1B9 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		67085E2E2924C2C80028F1B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		672086C62925453600C3DB57 /* CircleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnimationView.swift; sourceTree = "<group>"; };
+		672ADC12292D6EA70094443D /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		672ADC17292E76170094443D /* AddToFriendsQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFriendsQuery.swift; sourceTree = "<group>"; };
+		672ADC19292E76370094443D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		67803F30292D01AA003350E5 /* RandomImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImagesView.swift; sourceTree = "<group>"; };
 		67C7D9762928CF3000FA8705 /* FindUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindUsersView.swift; sourceTree = "<group>"; };
 		67C7D9792929373600FA8705 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		67C7D97B2929378A00FA8705 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
@@ -47,6 +58,8 @@
 		67C7D9892929839800FA8705 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		67C7D98B292ABF4900FA8705 /* FoundUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundUserView.swift; sourceTree = "<group>"; };
 		67C7D98D292AC3B000FA8705 /* CircleUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleUserView.swift; sourceTree = "<group>"; };
+		67C7D991292BCA1200FA8705 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		67C7D996292BE2A600FA8705 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672ADC16292E28E50094443D /* PopupView in Frameworks */,
+				67C7D994292BCD9800FA8705 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +103,7 @@
 				67085E1329241BEF0028F1B9 /* ContentView.swift */,
 				67085E1529241BF00028F1B9 /* Assets.xcassets */,
 				67085E1729241BF00028F1B9 /* Preview Content */,
+				67C7D991292BCA1200FA8705 /* MyPlayground.playground */,
 			);
 			path = BluetoothPRO;
 			sourceTree = "<group>";
@@ -121,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				67C7D9792929373600FA8705 /* UserDefaultsManager.swift */,
+				672ADC19292E76370094443D /* NetworkManager.swift */,
 				67085E26292421050028F1B9 /* BluetoothManagers */,
 			);
 			path = Core;
@@ -131,6 +148,7 @@
 			children = (
 				67C7D97B2929378A00FA8705 /* AppModel.swift */,
 				67C7D9852929814600FA8705 /* FriendListViewModel.swift */,
+				672ADC12292D6EA70094443D /* RegistrationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -151,6 +169,7 @@
 		67C7D9872929817B00FA8705 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				67C7D995292BE29D00FA8705 /* DTO */,
 				67085E2E2924C2C80028F1B9 /* User.swift */,
 			);
 			path = Models;
@@ -161,8 +180,18 @@
 			children = (
 				67C7D9892929839800FA8705 /* FriendCell.swift */,
 				67C7D98D292AC3B000FA8705 /* CircleUserView.swift */,
+				67803F30292D01AA003350E5 /* RandomImagesView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		67C7D995292BE29D00FA8705 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				67C7D996292BE2A600FA8705 /* UserDTO.swift */,
+				672ADC17292E76170094443D /* AddToFriendsQuery.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +210,10 @@
 			dependencies = (
 			);
 			name = BluetoothPRO;
+			packageProductDependencies = (
+				67C7D993292BCD9800FA8705 /* Alamofire */,
+				672ADC15292E28E50094443D /* PopupView */,
+			);
 			productName = BluetoothPRO;
 			productReference = 67085E0E29241BEF0028F1B9 /* BluetoothPRO.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +242,10 @@
 				Base,
 			);
 			mainGroup = 67085E0529241BEF0028F1B9;
+			packageReferences = (
+				67C7D992292BCD9800FA8705 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				672ADC14292E28E50094443D /* XCRemoteSwiftPackageReference "PopupView" */,
+			);
 			productRefGroup = 67085E0F29241BEF0028F1B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,13 +275,18 @@
 				67085E2D292429810028F1B9 /* Utility.swift in Sources */,
 				67C7D9862929814600FA8705 /* FriendListViewModel.swift in Sources */,
 				67085E28292421210028F1B9 /* RecieveManager.swift in Sources */,
+				672ADC1A292E76370094443D /* NetworkManager.swift in Sources */,
+				672ADC13292D6EA70094443D /* RegistrationViewModel.swift in Sources */,
 				67C7D98429293D4C00FA8705 /* FriendsListView.swift in Sources */,
+				67C7D997292BE2A600FA8705 /* UserDTO.swift in Sources */,
 				67085E2F2924C2C80028F1B9 /* User.swift in Sources */,
+				672ADC18292E76170094443D /* AddToFriendsQuery.swift in Sources */,
 				67C7D97C2929378A00FA8705 /* AppModel.swift in Sources */,
 				67085E1429241BEF0028F1B9 /* ContentView.swift in Sources */,
 				67C7D98A2929839800FA8705 /* FriendCell.swift in Sources */,
 				67C7D98C292ABF4900FA8705 /* FoundUserView.swift in Sources */,
 				67C7D9772928CF3000FA8705 /* FindUsersView.swift in Sources */,
+				67803F31292D01AA003350E5 /* RandomImagesView.swift in Sources */,
 				67C7D97A2929373600FA8705 /* UserDefaultsManager.swift in Sources */,
 				67C7D98E292AC3B000FA8705 /* CircleUserView.swift in Sources */,
 				67C7D98029293BCB00FA8705 /* MainView.swift in Sources */,
@@ -389,6 +431,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,6 +463,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +499,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		672ADC14292E28E50094443D /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		67C7D992292BCD9800FA8705 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		672ADC15292E28E50094443D /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 672ADC14292E28E50094443D /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+		67C7D993292BCD9800FA8705 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67C7D992292BCD9800FA8705 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 67085E0629241BEF0028F1B9 /* Project object */;
 }

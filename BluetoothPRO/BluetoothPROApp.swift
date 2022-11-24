@@ -12,7 +12,7 @@ struct BluetoothPROApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(appModel: AppModel())
+            RegistrationView(appModel: AppModel())
         }
     }
 }

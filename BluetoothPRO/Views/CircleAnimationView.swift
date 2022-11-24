@@ -25,7 +25,6 @@ struct DiscoverCircleView: View {
         Circle()
             .stroke(self.color, lineWidth: 1)
             .frame(width: circle.isAnimating ? maxSize.width : circle.width, height: circle.isAnimating ? maxSize.width : circle.width, alignment: .center)
-//            .scaleEffect(circle.isAnimating ? scale : 1)
             .opacity(circle.isAnimating ? 0 : 1)
             .animation(.easeInOut(duration: animationTime), value: circle.isAnimating)
             .onAppear {
@@ -48,7 +47,7 @@ struct PJRPulseButton: View {
     var timeBeetweenCircles: CGFloat
     let timer: Timer.TimerPublisher
 
-    init(color: Color = Color.blue, startWidth: CGFloat = 5, timeBeetweenCircles: CGFloat = 2, animationTime: CGFloat = 10) {
+    init(color: Color = Color.blue, startWidth: CGFloat = 5, timeBeetweenCircles: CGFloat = 1, animationTime: CGFloat = 10) {
         self.scale = 1
         self.color = color
         self.startWidth = startWidth
@@ -91,9 +90,7 @@ struct PJRPulseButton: View {
             print(arr.count)
             let last = CircleData(id: Int.random(in: 0...100024), width: startWidth)
             arr.append(last)
-            withAnimation(.easeInOut(duration: 0.5)) {
-                circleArray = arr
-            }
+            circleArray = arr
         }
     }
 }

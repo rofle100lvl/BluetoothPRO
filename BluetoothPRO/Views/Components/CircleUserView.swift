@@ -13,8 +13,10 @@ struct CircleDataView: View {
     var body: some View {
         if let image = UIImage(data: data) {
             Image(uiImage: image)
+                .resizable()
         } else {
             Image(systemName: "heart.fill")
+                .resizable()
         }
     }
 }

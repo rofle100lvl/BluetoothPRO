@@ -8,17 +8,21 @@
 import Foundation
 
 final class FriendsListViewModel: ObservableObject {
-    @Published var friends: [User] = []
-    let user: User = User(userToken: UUID(), name: "Roma", photo_url: Data())
+    @Published var userFriends: [User] = []
     let appModel: AppModel
     
     init(appModel: AppModel) {
         self.appModel = appModel
+        fetchFriends()
     }
     
     func fetchFriends() {
-        appModel.networkManager.fetchFriends(user: user.userToken) { friends in
-            self.friends = friends
+        appModel.networkManager.fetchFriends(user: appModel.currentUser!.id) { friends in
+            friends.forEach {
+                self.appModel.networkManager.fetchUser(id: $0) { [self] user in
+                    userFriends.append(User(dto: user))
+                }
+            }
         }
     }
 }

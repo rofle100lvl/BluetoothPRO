@@ -17,7 +17,7 @@ struct FriendsListView: View {
     var body: some View {
         ScrollView {
             VStack {
-                ForEach(friendsListModel.friends) { user in
+                ForEach(friendsListModel.userFriends) { user in
                     FriendCell(user: user)
                 }
             }
